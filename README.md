@@ -1,27 +1,17 @@
-# UnitTesing
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
+ 
+Note that :
 
-## Development server
+    HttpClientTestingModule is imported to mock HttpClientModule because we don’t want to make actual http requests while testing the service.
+    HttpTestingController is injected into tests, that allows for mocking and flushing of requests.
+    httpMock.verify() is called after each tests to verify that there are no outstanding http calls
+ 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+/*
+stopped from here
 
-## Code scaffolding
+Note that in getUserDetails() we are simply calling a REST API, but here things are different. We are passing params using HttpParams
+*/
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+https://shashankvivek-7.medium.com/testing-services-in-angular-karma-ed49f8d5b264
+https://offering.solutions/blog/articles/2017/10/02/testing-an-angular-http-service/
