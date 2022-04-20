@@ -5,14 +5,14 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './test-one.component.html',
   styleUrls: ['./test-one.component.css']
 })
-export class TestOneComponent implements OnInit {
+export class TestOneComponent  { //implements OnInit
   value = 0;
   message!: string;
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  // ngOnInit(): void {
+  // }
 
   increment() {
     if (this.value < 15) {
